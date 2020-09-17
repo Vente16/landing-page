@@ -218,3 +218,30 @@ ul {
   opacity: 0.9;
   border-color: #bbc1e1;
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #box {
+    width: 80%;
+    min-height: 400px;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 300px) and (max-width: 480px) {
+  .img-logo img {
+    width: 60%;
+  }
+
+  #box {
+    width: 80%;
+    min-height: 300px;
+  }
+
+  .login-button {
+    width: 80%;
+  }
+}
