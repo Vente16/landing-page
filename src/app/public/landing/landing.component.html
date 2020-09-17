@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="home">
   <nav class="navbar container">
     <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
       <i class="fa fa-bars"></i>
@@ -7,29 +7,23 @@
     <input type="checkbox" id="chkToggle" />
     <ul class="main-nav" id="js-menu">
       <li>
-        <a href="#" class="nav-links simple-link">Inicio</a>
+        <a href="/#home" class="nav-links simple-link">Inicio</a>
       </li>
       <li>
-        <a href="#" class="nav-links simple-link">Tecnologías</a>
+        <a href="/#technologies" class="nav-links simple-link">Tecnologías</a>
       </li>
       <li>
-        <a href="#" class="nav-links simple-link">Beneficios</a>
+        <a href="#benefits" class="nav-links simple-link">Beneficios</a>
       </li>
       <li>
-        <a href="#" class="nav-links simple-link">Requerimientos</a>
+        <a href="#requirements" class="nav-links simple-link">Requerimientos</a>
       </li>
       <li>
-        <a href="#" class="nav-links button-wolox-login">Login</a>
+        <a [routerLink]="['/login']" class="nav-links button-wolox-login"
+          >Login</a
+        >
       </li>
     </ul>
-
-    <!-- <ul>
-      <li><a href=""></a></li>
-      <li><a href="">Inicio</a></li>
-      <li><a href="">Tecnologías</a></li>
-      <li><a href="">Beneficios</a></li>
-      <li><a href="">Requerimientos</a></li>
-    </ul> -->
   </nav>
 
   <div class="box container">
@@ -51,7 +45,7 @@
   </div>
 </header>
 
-<div class="box container">
+<div class="box container" id="technologies">
   <div class="content">
     <p class="technologies-paragraph">
       Estamos buscando<br />
@@ -77,7 +71,14 @@
         ><br />
         <span class="follow">
           <span> <i class="fab fa-twitter"></i> @Wolox</span><br /><br />
-          <span class="rigth-button"><a class="button-wolox">Siguenos</a></span>
+          <span class="rigth-button"
+            ><a
+              class="button-wolox"
+              href="https://twitter.com/Wolox"
+              target="_blank"
+              >Siguenos</a
+            ></span
+          >
         </span>
       </span>
     </h2>
@@ -93,7 +94,7 @@
   </div>
 </div>
 
-<div class="box container">
+<div class="box container" id="benefits">
   <h1 class="text-principal">
     Entre los beneficios que ofrecemos se encuentran
     <span class="text-blue">;)</span>
@@ -137,7 +138,7 @@
   </div>
 </div>
 
-<div class="box container requirements">
+<div class="box container requirements" id="requirements">
   <div class="content">
     <h1>Requerimientos</h1>
   </div>
@@ -158,7 +159,7 @@
     </p>
   </div>
 </div>
-x
+
 <div class="box">
   <div class="img-text-foot">
     <img src="assets/Backgrounds/Bg_Footer.png" alt="" />
@@ -169,7 +170,14 @@ x
         ><br /><span class="spacer"></span> Te invitamos a ver más
         información</span
       ><br /><br />
-      <span class="spacer"><a class="button-wolox-foot">Conoce más</a></span>
+      <span class="spacer"
+        ><a
+          class="button-wolox-foot"
+          href="https://www.wolox.com.ar/"
+          target="_blank"
+          >Conoce más</a
+        ></span
+      >
     </h2>
   </div>
 </div>
