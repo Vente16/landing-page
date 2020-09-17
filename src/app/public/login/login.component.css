@@ -72,9 +72,12 @@
   font-weight: 700;
   cursor: pointer;
   border-width: 1px;
-  border-radius: 3px;
+  /* border-radius: 3px;
   border-color: #05f;
-  background-color: #05f;
+  background-color: #05f; */
+  border-radius: 1.5em;
+  border: 2px solid #3787af;
+  background: #3787af;
   font-size: 100%;
   text-transform: uppercase;
 }

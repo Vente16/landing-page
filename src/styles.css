@@ -1,5 +1,25 @@
+@font-face {
+  font-family: AlleynW01-Regular;
+  src: url("//db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.eot");
+  src: url("//db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.svg#AlleynW01-Regular")
+      format("svg");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  font-family: Gordita, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: AlleynW01-Regular;
   background-color: #f8f8f8;
   -moz-osx-font-smoothing: grayscale;
 }
