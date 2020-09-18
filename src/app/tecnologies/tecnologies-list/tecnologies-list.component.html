@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="filters">
+    <div class="filter-content">
+      <div class="input-content">
+        <input
+          type="text"
+          class="my-input"
+          placeholder="Buscar"
+          [(ngModel)]="search"
+          (keyup)="changeTotal(true)"
+        />
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Filtros <i class="fas fa-filter"></i></button>
+        <div class="dropdown-content">
+          <a *ngFor="let filter of typeFilters; index as i">
+            <div class="aks-input-row">
+              <input
+                class="aks-input"
+                type="checkbox"
+                id="checkbox{{ i }}"
+                name="checkbox"
+                [checked]="filter.checked"
+                (change)="applyFilter($event, filter, i)"
+              />
+              <label class="aks-input-label" for="checkbox{{ i }}"
+                >{{ filter.name }}
+
+                <i class="fas fa-sort-alpha-down" *ngIf="i == 0"></i>
+              </label></div
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div
+    class="cards"
+    *ngFor="let tecnology of filterTecnogolies | filter: search"
+  >
+    <div class="card-item">
+      <div
+        class="card-image"
+        [style.background]="'url(' + tecnology.logo + ')'"
+        [style.background-repeat]="'no-repeat'"
+        [style.background-position]="'center center'"
+      ></div>
+      <div class="card-info">
+        <h2 class="card-title">{{ tecnology.tech }}</h2>
+        <p class="card-intro">
+          <span><strong>Autor: </strong> {{ tecnology.author }}</span
+          ><br />
+          <span><strong>Lenguaje: </strong> {{ tecnology.language }}</span
+          ><br />
+          <span><strong>Año: </strong> {{ tecnology.year }}</span
+          ><br />
+          <span><strong>Tipo: </strong> {{ tecnology.type }}</span
+          ><br />
+          <span><strong>Licencia: </strong> {{ tecnology.license }}</span
+          ><br />
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-total">
+    <p class="total" *ngIf="!error">
+      <i class="fas fa-database"></i> Total encontrados:
+      {{ total }}
+    </p>
+
+    <p class="error" *ngIf="error">
+      <i class="fas fa-exclamation-circle"></i> Ha ocurrido un error, por favor
+      intenta luego.
+    </p>
+  </div>
+</div>

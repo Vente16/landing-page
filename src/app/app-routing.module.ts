@@ -1,21 +1,18 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { LoginComponent } from "./public/login/login.component";
-import { LandingComponent } from "./public/landing/landing.component";
-import { TecnologiesComponent } from "./private/tecnologies/tecnologies.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: LandingComponent,
+    loadChildren: "./landing/landing.module#LandingModule",
   },
   {
     path: "login",
-    component: LoginComponent,
+    loadChildren: "./login/login.module#LoginModule",
   },
   {
     path: "list",
-    component: TecnologiesComponent,
+    loadChildren: "./tecnologies/tecnologies.module#TecnologiesModule",
   },
 ];
 
