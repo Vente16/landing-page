@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: "./tecnologies/tecnologies.module#TecnologiesModule",
     canActivate: [AuthvalidationGuard],
   },
+  {
+    path: "**",
+    loadChildren: "./landing/landing.module#LandingModule",
+  },
 ];
 
 @NgModule({
