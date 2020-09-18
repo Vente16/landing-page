@@ -297,6 +297,28 @@
     height: 100px;
   }
 }
+
+.logout {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.button-logout {
+  margin-right: 25%;
+  margin-top: 2%;
+  background-color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  border: 2px solid #f64f64;
+  cursor: pointer;
+  color: #f64f64;
+  font-weight: 700;
+}
+
+.button-logout:hover {
+  background-color: #f64f64;
+  color: #fff;
+}
 /*
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;

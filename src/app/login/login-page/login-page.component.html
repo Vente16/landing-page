@@ -71,9 +71,14 @@
           <label class="aks-input-label" for="checkbox">Mantener sesión</label>
         </div>
 
-        <div class="input-content">
+        <div class="input-content" *ngIf="!loading">
           <button class="login-button" type="submit">Iniciar Sesión</button>
         </div>
+        <app-spinner *ngIf="loading"></app-spinner>
+        <p class="error"  *ngIf="error">
+          <i class="fas fa-exclamation-circle"></i> Ha ocurrido un error, por
+          favor intenta luego.
+        </p>
       </fieldset>
     </form>
   </div>

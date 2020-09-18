@@ -1,5 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AuthvalidationGuard } from "./shared/guards/authvalidation.guard";
+import { CheckUserGuard } from "./shared/guards/check-user.guard";
 
 const routes: Routes = [
   {
@@ -9,10 +11,12 @@ const routes: Routes = [
   {
     path: "login",
     loadChildren: "./login/login.module#LoginModule",
+    canActivate: [CheckUserGuard],
   },
   {
     path: "list",
     loadChildren: "./tecnologies/tecnologies.module#TecnologiesModule",
+    canActivate: [AuthvalidationGuard],
   },
 ];
 

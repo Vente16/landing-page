@@ -18,7 +18,7 @@
       <li>
         <a href="#requirements" class="nav-links simple-link">Requerimientos</a>
       </li>
-      <li>
+      <li *ngIf="showLogginButton">
         <a [routerLink]="['/login']" class="nav-links button-wolox-login"
           >Login</a
         >

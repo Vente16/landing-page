@@ -219,6 +219,13 @@ ul {
   border-color: #bbc1e1;
 }
 
+.error {
+  color: #f64f64;
+  margin-top: 2%;
+  font-size: 1em;
+  font-weight: 700;
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
   #box {
     width: 80%;

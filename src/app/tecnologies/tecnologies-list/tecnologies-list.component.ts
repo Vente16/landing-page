@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthserviceService } from "src/app/services/authservice.service";
 import { TecnologyService } from "src/app/services/tecnology.service";
 
 @Component({
@@ -19,7 +21,11 @@ export class TecnologiesListComponent implements OnInit {
   filterTecnogolies = [];
   total: number = 0;
 
-  constructor(private tecnologyTecnology: TecnologyService) {
+  constructor(
+    private tecnologyTecnology: TecnologyService,
+    private authService: AuthserviceService,
+    private route: Router
+  ) {
     this.getInfo();
   }
 
@@ -111,6 +117,12 @@ export class TecnologiesListComponent implements OnInit {
     }
 
     this.changeTotal(false);
+  }
+
+  logout() {
+    localStorage.clear();
+    this.authService.isLogged.next(false);
+    this.route.navigate(["/login"]);
   }
 
   ngOnInit() {}
