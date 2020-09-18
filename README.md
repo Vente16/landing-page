@@ -13,7 +13,7 @@ Para usar la app de manera local clona el proyecto y ejecuta los sigueintes coma
 
 ## Demo
 
-Hecha un vistazo a la demo de la app [aquí](https://wolox-app.web.app/#/)
+Puedes ver el demo de la app [aquí](https://wolox-app.web.app/#/)
 
 ## License
 
