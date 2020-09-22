@@ -4,7 +4,7 @@ Landing page y miniApp Angular
 
 ## Instalación
 
-Para usar la app de manera local clona el proyecto y ejecuta los siguintes comandos:
+Para usar la app de manera local clona el proyecto y ejecuta los siguientes comandos:
 
 ```bash
   npm install
